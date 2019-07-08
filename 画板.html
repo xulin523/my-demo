@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    
+    </style>
+    <canvas id="canvas" width="500" height="500" style="border:1px solid red;"></canvas>
+    <input type="range" id="size" min="1" max="50" value="">
+    <input type="color" id="color" value="">
+    <script>
+    var canvas = document.getElementById("canvas");
+    var pen = canvas.getContext("2d");
+
+    var range = document.getElementById("size");
+    var color = document.getElementById("color");
+    var flag =false;
+        canvas.onmousedown = function(e){
+            flag= true;
+            pen.beginPath();//开始路径
+        }
+        canvas.onmousemove = function(e){
+            if(flag){
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                pen.lineTo(x,y);
+                pen.stroke();
+            }
+        }
+        canvas.onmouseup = function(e){
+            flag = false;
+            pen.closePath();//结束路径
+        }
+        range.onchange = function(){
+            pen.lineWidth = this.value;
+        }
+        color.onchange = function(){
+            pen.strokeStyle = this.value;
+        }
+    </script>
+</body>
+</html>

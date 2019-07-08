@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一天 canvas</title>
+</head>
+<body>
+    <style>
+    #demo{
+        /* width: 500px;
+        height: 500px; */
+        background-color: pink;    }
+    </style>
+    <canvas id="demo" width="640" height="500"></canvas>
+    <script>
+    var canvas = document.getElementById("demo");
+    var pen = canvas.getContext("2d");
+        // pen.fillStyle = "#333";
+        // pen.fillRect(0,0,50,50);
+
+        // pen.strokeStyle = "red";
+        // pen.moveTo(0,0);
+        // pen.lineTo(50,50);
+        // pen.lineTo(0,50);
+        // pen.lineTo(0,0);
+        // pen.stroke();
+        // pen.fill();
+        pen.beginPath();
+        pen.arc(320,250,200,0,2*Math.PI);
+        pen.strokeStyle = "red";
+        pen.stroke();
+
+        pen.createImageData();
+        pen.beginPath();
+        pen.arc(270,170,200,0,2*Math.PI);
+        pen.fillStyle = "#fff";
+        pen.stroke();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				font-family: "arial, helvetica, sans-serif";
+				font-size: 14px;
+				color: #000;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+			
+			.left {
+				float: left;
+			}
+			
+			.right {
+				float: right;
+			}
+			
+			.clear:after {
+				display: block;
+				content: "";
+				clear: both;
+			}
+			
+			.container {
+				width: 1000px;
+				margin: 0px auto;
+			}
+			
+			header {
+				margin-bottom: 20px;
+			}
+			
+			header .item {
+				height: 50px;
+				width: 49%;
+				background-color: red;
+			}
+			
+			nav {
+				height: 200px;
+				background-color: blue;
+				margin-bottom: 20px;
+			}
+			
+			article {
+				margin-bottom: 20px;
+			}
+			
+			article section {
+				width: 32%;
+				height: 50px;
+				background-color: green;
+				margin-right: 2%;
+			}
+			
+			article section:last-child {
+				margin-right: 0;
+			}
+			
+			footer {}
+			
+			footer .item {
+				float: left;
+				height: 100px;
+				background-color: black;
+				width: 23%;
+				margin-right: 2.66%;
+			}
+			
+			footer .item:last-child {
+				margin-right: 0;
+			}
+			
+			@media only screen and (max-width:1024px) {
+				.container {
+					width: 100%;
+				}
+				header {
+					margin-bottom: 0;
+				}
+				header .item {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+				nav {
+					height: 100px;
+				}
+				article {
+					margin-bottom: 0;
+				}
+				article section {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+				footer .item {
+					width: 49%;
+					margin-right: 2%;
+					margin-bottom: 20px;
+				}
+				footer .item:nth-child(2n) {
+					margin-right: 0;
+				}
+			}
+			
+			@media only screen and (max-width:768px) {
+				footer .item {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 20px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<header class="clear">
+				<div class="item left"></div>
+				<div class="item right"></div>
+			</header>
+
+			<nav></nav>
+
+			<article class="clear">
+				<section class="left"></section>
+				<section class="left"></section>
+				<section class="left"></section>
+			</article>
+
+			<footer>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</footer>
+
+		</div>
+
+	</body>
+
+</html>
